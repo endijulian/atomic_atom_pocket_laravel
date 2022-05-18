@@ -5,11 +5,25 @@
                 <a href="{{ route('home') }}"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
             </li>
             <li class="menu-title">Module</li>
-            <li class="{{ (request()->is('menu1*')) ? 'active' : '' }}">
-                <a href="#"> <i class="menu-icon fa fa-table"></i>Menu 1</a>
+            <li class="menu-item-has-children dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="menu-icon fa fa-th"></i>Master</a>
+                <ul class="sub-menu children dropdown-menu"><li class="subtitle"> <i class="menu-icon fa fa-th"></i>Master</li>
+                    <li><i class="fa fa-table"></i><a href="tables-basic.html">Dompet</a></li>
+                    <li><i class="fa fa-table"></i><a href="tables-data.html">Kategori</a></li>
+                </ul>
             </li>
-            <li class="{{ (request()->is('menu2*')) ? 'active' : '' }}">
-                <a href="#"> <i class="menu-icon fa fa-table"></i>Menu 2</a>
+            <li class="menu-item-has-children dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="menu-icon fa fa-bar-chart"></i>Transaksi</a>
+                <ul class="sub-menu children dropdown-menu"><li class="subtitle"> <i class="menu-icon fa fa-bar-chart"></i>Transaksi</li>
+                    <li><i class="fa fa-table"></i><a href="tables-basic.html">Dompet Masuk</a></li>
+                    <li><i class="fa fa-table"></i><a href="tables-data.html">Dompet Keluar</a></li>
+                </ul>
+            </li>
+            <li class="menu-item-has-children dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="menu-icon ti-email"></i>Laporan</a>
+                <ul class="sub-menu children dropdown-menu"><li class="subtitle"> <i class="menu-icon ti-email"></i>Laporan</li>
+                    <li><i class="fa fa-table"></i><a href="tables-basic.html">Laporan Transaksi</a></li>
+                </ul>
             </li>
         </ul>
     </div><!-- /.navbar-collapse -->

@@ -19,5 +19,5 @@
 @endsection
 
 @section('content')
-    <img src="{{ asset('Template-Admin/images/logo.png') }}" alt="" class="admin-logo">
+    <img src="{{ asset('Template-Admin/images/endidompet.png') }}" alt="" class="admin-logo">
 @endsection
