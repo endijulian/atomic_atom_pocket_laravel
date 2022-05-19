@@ -9,7 +9,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="menu-icon fa fa-th"></i>Master</a>
                 <ul class="sub-menu children dropdown-menu">
                     <li><i class="fa fa-table"></i><a href="{{ route('dompet.index') }}">Dompet</a></li>
-                    <li><i class="fa fa-table"></i><a href="{{ route('dompet.index') }}">Kategori</a></li>
+                    <li><i class="fa fa-table"></i><a href="{{ route('category.index') }}">Kategori</a></li>
                 </ul>
             </li>
             <li class="menu-item-has-children dropdown">
