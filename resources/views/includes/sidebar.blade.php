@@ -16,7 +16,7 @@
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="menu-icon fa fa-bar-chart"></i>Transaksi</a>
                 <ul class="sub-menu children dropdown-menu">
                     <li><i class="fa fa-table"></i><a href="{{ route('dompetmasuk.index') }}">Dompet Masuk</a></li>
-                    <li><i class="fa fa-table"></i><a href="tables-data.html">Dompet Keluar</a></li>
+                    <li><i class="fa fa-table"></i><a href="{{ route('dompetkeluar.index') }}">Dompet Keluar</a></li>
                 </ul>
             </li>
             <li class="menu-item-has-children dropdown">

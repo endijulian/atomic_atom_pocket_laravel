@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DompetController;
+use App\Http\Controllers\DompetKeluarController;
 use App\Http\Controllers\DompetMasukController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -57,3 +58,8 @@ Route::post('category/Active/{id}', [CategoryController::class, 'Active'])->name
 Route::get('/dompetmasuk', [DompetMasukController::class, 'index'])->name('dompetmasuk.index');
 Route::get('dompetmasuk/create', [DompetMasukController::class, 'create'])->name('dompetmasuk.create');
 Route::post('dompetmasuk/store', [DompetMasukController::class, 'store'])->name('dompetmasuk.store');
+
+//Route Dompet Keluar
+Route::get('/dompetkeluar', [DompetKeluarController::class, 'index'])->name('dompetkeluar.index');
+Route::get('dompetkeluar/create', [DompetKeluarController::class, 'create'])->name('dompetkeluar.create');
+Route::post('dompetkeluar/store', [DompetKeluarController::class, 'store'])->name('dompetkeluar.store');
