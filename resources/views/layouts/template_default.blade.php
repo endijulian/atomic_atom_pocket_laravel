@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     @include('includes.style')
+    @stack('style-custom')
 
 </head>
 
@@ -31,6 +32,7 @@
     </div>
 
     @include('includes.script')
+    @stack('script-custom')
 
 </body>
 </html>
