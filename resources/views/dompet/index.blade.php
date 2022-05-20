@@ -62,7 +62,16 @@
     <div class="col-lg-12">
         <div class="card h-75">
             <div class="col-md-12 mt-3">
-                <a href="{{ route('dompet.create') }}" class="float-right btn btn-primary">Buat Baru</a>
+                <div class="btn-group float-right">
+                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle btn btn-primary">Filter</button>
+                    <div tabindex="-1" aria-hidden="true" role="menu" class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 38px, 0px);">
+                        <a href="{{ route('dompet.index') }}" type="button" tabindex="0" class="dropdown-item">Semua</a>
+                        @foreach ($dompetStatus as $item)
+                            <a href="{{ route('dompet.getStatus', $item->id) }}" type="button" tabindex="0" class="dropdown-item">{{ $item->nama }}</a>
+                        @endforeach
+                    </div>
+                </div>
+                <a href="{{ route('dompet.create') }}" class="float-right btn text-white" style="background-color: #1552B6;">Buat Baru</a>
             </div>
         </div>
     </div>

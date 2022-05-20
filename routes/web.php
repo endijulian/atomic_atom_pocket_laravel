@@ -38,18 +38,22 @@ Route::get('dompet/show/{id}', [DompetController::class, 'show'])->name('dompet.
 Route::post('dompet/store', [DompetController::class, 'store'])->name('dompet.store');
 Route::put('dompet/update/{id}', [DompetController::class, 'update'])->name('dompet.update');
 
+Route::get('dompet/getStatus/{id}', [DompetController::class, 'getStatus'])->name('dompet.getStatus');
+
 //Route Dompet Active NonActive
 Route::post('dompet/inActive/{id}', [DompetController::class, 'inActive'])->name('dompet.inActive');
 Route::post('dompet/Active/{id}', [DompetController::class, 'Active'])->name('dompet.Active');
 
 
-//Route Dompet
+//Route Category
 Route::get('/category', [CategoryController::class, 'index'])->name('category.index');
 Route::get('category/create', [CategoryController::class, 'create'])->name('category.create');
 Route::get('category/edit/{id}', [CategoryController::class, 'edit'])->name('category.edit');
 Route::get('category/show/{id}', [CategoryController::class, 'show'])->name('category.show');
 Route::post('category/store', [CategoryController::class, 'store'])->name('category.store');
 Route::put('category/update/{id}', [CategoryController::class, 'update'])->name('category.update');
+
+Route::get('dompet/getStatus/{id}', [CategoryController::class, 'getStatus'])->name('dompet.getStatus');
 
 //Route Category Active NonActive
 Route::post('category/inActive/{id}', [CategoryController::class, 'inActive'])->name('category.inActive');

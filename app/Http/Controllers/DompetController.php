@@ -18,9 +18,18 @@ class DompetController extends Controller
      */
     public function index()
     {
-        $dompets    = Dompet::all();
+        $dompetStatus   = StatusDompet::all();
+        $dompets        = Dompet::all();
 
-        return view('dompet.index', compact('dompets'));
+        return view('dompet.index', compact('dompets', 'dompetStatus'));
+    }
+
+    public function getStatus($id)
+    {
+        $dompetStatus   = StatusDompet::all();
+        $dompets        = Dompet::where('status_id', $id)->get();
+
+        return view('dompet.index', compact('dompets', 'dompetStatus'));
     }
 
     /**

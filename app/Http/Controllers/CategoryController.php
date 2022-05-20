@@ -12,9 +12,18 @@ class CategoryController extends Controller
 {
     public function index()
     {
-        $categories    = Category::all();
+        $dompetStatus   = StatusDompet::all();
+        $categories     = Category::all();
 
-        return view('category.index', compact('categories'));
+        return view('category.index', compact('categories', 'dompetStatus'));
+    }
+
+    public function getStatus($id)
+    {
+        $dompetStatus   = StatusDompet::all();
+        $dompets        = Category::where('status_id', $id)->get();
+
+        return view('dompet.index', compact('dompets', 'dompetStatus'));
     }
 
     public function create()
