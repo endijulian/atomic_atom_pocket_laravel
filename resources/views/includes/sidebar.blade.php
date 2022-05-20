@@ -22,7 +22,7 @@
             <li class="menu-item-has-children dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"> <i class="menu-icon ti-email"></i>Laporan</a>
                 <ul class="sub-menu children dropdown-menu">
-                    <li><i class="fa fa-table"></i><a href="tables-basic.html">Laporan Transaksi</a></li>
+                    <li><i class="fa fa-table"></i><a href="{{ route('laporan.index') }}">Laporan Transaksi</a></li>
                 </ul>
             </li>
         </ul>

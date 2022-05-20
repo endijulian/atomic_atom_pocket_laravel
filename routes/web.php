@@ -4,6 +4,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\DompetController;
 use App\Http\Controllers\DompetKeluarController;
 use App\Http\Controllers\DompetMasukController;
+use App\Http\Controllers\LaporanController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 */
 
 Route::get('/', function () {
-    return view('auth.login');
+    return view('auth.newLogin');
 });
 
 Auth::routes(
@@ -63,3 +64,7 @@ Route::post('dompetmasuk/store', [DompetMasukController::class, 'store'])->name(
 Route::get('/dompetkeluar', [DompetKeluarController::class, 'index'])->name('dompetkeluar.index');
 Route::get('dompetkeluar/create', [DompetKeluarController::class, 'create'])->name('dompetkeluar.create');
 Route::post('dompetkeluar/store', [DompetKeluarController::class, 'store'])->name('dompetkeluar.store');
+
+//Route Laporan
+Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
+Route::post('/laporan/listfilter', [LaporanController::class, 'ListFilter'])->name('laporan.listfilter');
