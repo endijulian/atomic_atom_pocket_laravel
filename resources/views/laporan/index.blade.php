@@ -80,7 +80,7 @@
 
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('laporan.listfilter') }}" method="post" novalidate="novalidate" id="SubmitForm">
+                    <form action="{{ route('laporan.listfilter') }}" method="get" novalidate="novalidate" id="filter-form">
                         @csrf
 
                         <div class="card-body col-lg-3">
@@ -170,9 +170,4 @@
     </div>
 </div>
 
-{{-- <script>
-    $('#btn-all-buka').click(function(){
-        $('.plus-detail').trigger('click');
-    });
-</script> --}}
 @endsection

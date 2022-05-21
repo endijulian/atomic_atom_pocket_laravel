@@ -71,4 +71,4 @@ Route::post('dompetkeluar/store', [DompetKeluarController::class, 'store'])->nam
 
 //Route Laporan
 Route::get('/laporan', [LaporanController::class, 'index'])->name('laporan.index');
-Route::post('/laporan/listfilter', [LaporanController::class, 'ListFilter'])->name('laporan.listfilter');
+Route::get('/laporan/listfilter', [LaporanController::class, 'ListFilter'])->name('laporan.listfilter');
