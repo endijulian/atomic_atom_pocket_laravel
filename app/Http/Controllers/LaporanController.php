@@ -44,10 +44,9 @@ class LaporanController extends Controller
 
         $transaksi  = Transaksi::where('kategori_id', $kategori_id)
             ->where('dompet_id', $dompet_id)
-            ->where('status_id', $val_status_id)
+            ->whereIn('status_id', $val_status_id)
             ->whereBetween('tanggal', [$start_date, $end_date])->get();
 
         return view('laporan.listFilter', compact('transaksi', 'start_date', 'end_date'));
     }
-
 }
