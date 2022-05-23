@@ -21,7 +21,12 @@ class DompetController extends Controller
         $dompetStatus   = StatusDompet::all();
         $dompets        = Dompet::all();
 
-        return view('dompet.index', compact('dompets', 'dompetStatus'));
+        // $valueTime = '2 Jam 8 Menit 11 Detik';
+        $timeVal = 7691;
+        $tmeOut  = date('H:i:s', $timeVal);
+
+
+        return view('dompet.index', compact('dompets', 'dompetStatus', 'tmeOut'));
     }
 
     public function getStatus($id)

@@ -77,6 +77,10 @@
     </div>
 </div>
 
+<div class="col-md-12">
+    <p>{{ $tmeOut }}</p>
+</div>
+
 <div class="animated fadeIn">
     <div class="row">
         <div class="col-lg-12">
